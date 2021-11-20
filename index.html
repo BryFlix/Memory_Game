@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Memory Game</title>
+    <script src="memory.js" async></script>
+    <link rel="stylesheet" href="memory.css">
+    <link rel="stylesheet" href="responsive.css">
+</head>
+<body>
+    
+    <div class="overlayText visible">
+        Click To Start
+    </div>
+    <div id="gameoverText" class="overlayText">
+        Game Over
+        <span class="overlayTextSmall">Click To Restart</span>
+    </div>
+    <div id="victoryText" class="overlayText">
+        Victory
+        <span class="overlayTextSmall">Click To Restart</span>
+    </div>
+    <h1 class="title">Memory Game</h1>
+        <div class="container">
+            <div class="infoContainer">
+                <div class="info">
+                    Time: <span id="timeRemaining">100</span>
+                </div>
+                <div class="info">
+                    Flips: <span id="flips">0</span>
+                </div>
+            </div>
+            <div class="card">
+                <div class="cardBack cardFace">
+                    <img class="kunai kunaiLeft" src="img/kunai.png">
+                    <img class="kunai kunaiRight" src="img/kunai.png">
+                    <img class="kunai kunaiBottom" src="img/kunai.png">
+                    <img class="kunai kunaiTop" src="img/kunai.png">
+                    <img class="ninja" src="img/ninja.png">
+                </div>
+                <div class="cardFront cardFace">
+                    <img class="kunai kunaiLeft" src="img/kunai.png">
+                    <img class="kunai kunaiRight" src="img/kunai.png">
+                    <img class="kunai kunaiBottom" src="img/kunai.png">
+                    <img class="kunai kunaiTop" src="img/kunai.png">
+                    <img class="cardValue" src="img/n1.png">
+                </div>
+            </div>
+            <div class="card">
+                <div class="cardBack cardFace">
+                    <img class="kunai kunaiLeft" src="img/kunai.png">
+                    <img class="kunai kunaiRight" src="img/kunai.png">
+                    <img class="kunai kunaiBottom" src="img/kunai.png">
+                    <img class="kunai kunaiTop" src="img/kunai.png">
+                    <img class="ninja" src="img/ninja.png">
+                </div>
+                <div class="cardFront cardFace">
+                    <img class="kunai kunaiLeft" src="img/kunai.png">
+                    <img class="kunai kunaiRight" src="img/kunai.png">
+                    <img class="kunai kunaiBottom" src="img/kunai.png">
+                    <img class="kunai kunaiTop" src="img/kunai.png">
+                    <img class="cardValue" src="img/n1.png">
+                </div>
+            </div>
+            <div class="card">
+                <div class="cardBack cardFace">
+                    <img class="kunai kunaiLeft" src="img/kunai.png">
+                    <img class="kunai kunaiRight" src="img/kunai.png">
+                    <img class="kunai kunaiBottom" src="img/kunai.png">
+                    <img class="kunai kunaiTop" src="img/kunai.png">
+                    <img class="ninja" src="img/ninja.png">
+                </div>
+                <div class="cardFront cardFace">
+                    <img class="kunai kunaiLeft" src="img/kunai.png">
+                    <img class="kunai kunaiRight" src="img/kunai.png">
+                    <img class="kunai kunaiBottom" src="img/kunai.png">
+                    <img class="kunai kunaiTop" src="img/kunai.png">
+                    <img class="cardValue" src="img/n2.png">
+                </div>
+            </div>
+            <div class="card">
+                <div class="cardBack cardFace">
+                    <img class="kunai kunaiLeft" src="img/kunai.png">
+                    <img class="kunai kunaiRight" src="img/kunai.png">
+                    <img class="kunai kunaiBottom" src="img/kunai.png">
+                    <img class="kunai kunaiTop" src="img/kunai.png">
+                    <img class="ninja" src="img/ninja.png">
+                </div>
+                <div class="cardFront cardFace">
+                    <img class="kunai kunaiLeft" src="img/kunai.png">
+                    <img class="kunai kunaiRight" src="img/kunai.png">
+                    <img class="kunai kunaiBottom" src="img/kunai.png">
+                    <img class="kunai kunaiTop" src="img/kunai.png">
+                    <img class="cardValue" src="img/n2.png">
+                </div>
+            </div>
+            <div class="card">
+                <div class="cardBack cardFace">
+                    <img class="kunai kunaiLeft" src="img/kunai.png">
+                    <img class="kunai kunaiRight" src="img/kunai.png">
+                    <img class="kunai kunaiBottom" src="img/kunai.png">
+                    <img class="kunai kunaiTop" src="img/kunai.png">
+                    <img class="ninja" src="img/ninja.png">
+                </div>
+                <div class="cardFront cardFace">
+                    <img class="kunai kunaiLeft" src="img/kunai.png">
+                    <img class="kunai kunaiRight" src="img/kunai.png">
+                    <img class="kunai kunaiBottom" src="img/kunai.png">
+                    <img class="kunai kunaiTop" src="img/kunai.png">
+                    <img class="cardValue" src="img/n3.png">
+                </div>
+            </div>
+            <div class="card">
+                <div class="cardBack cardFace">
+                    <img class="kunai kunaiLeft" src="img/kunai.png">
+                    <img class="kunai kunaiRight" src="img/kunai.png">
+                    <img class="kunai kunaiBottom" src="img/kunai.png">
+                    <img class="kunai kunaiTop" src="img/kunai.png">
+                    <img class="ninja" src="img/ninja.png">
+                </div>
+                <div class="cardFront cardFace">
+                    <img class="kunai kunaiLeft" src="img/kunai.png">
+                    <img class="kunai kunaiRight" src="img/kunai.png">
+                    <img class="kunai kunaiBottom" src="img/kunai.png">
+                    <img class="kunai kunaiTop" src="img/kunai.png">
+                    <img class="cardValue" src="img/n3.png">
+                </div>
+            </div>
+            <div class="card">
+                <div class="cardBack cardFace">
+                    <img class="kunai kunaiLeft" src="img/kunai.png">
+                    <img class="kunai kunaiRight" src="img/kunai.png">
+                    <img class="kunai kunaiBottom" src="img/kunai.png">
+                    <img class="kunai kunaiTop" src="img/kunai.png">
+                    <img class="ninja" src="img/ninja.png">
+                </div>
+                <div class="cardFront cardFace">
+                    <img class="kunai kunaiLeft" src="img/kunai.png">
+                    <img class="kunai kunaiRight" src="img/kunai.png">
+                    <img class="kunai kunaiBottom" src="img/kunai.png">
+                    <img class="kunai kunaiTop" src="img/kunai.png">
+                    <img class="cardValue" src="img/n4.png">
+                </div>
+            </div>
+            <div class="card">
+                <div class="cardBack cardFace">
+                    <img class="kunai kunaiLeft" src="img/kunai.png">
+                    <img class="kunai kunaiRight" src="img/kunai.png">
+                    <img class="kunai kunaiBottom" src="img/kunai.png">
+                    <img class="kunai kunaiTop" src="img/kunai.png">
+                    <img class="ninja" src="img/ninja.png">
+                </div>
+                <div class="cardFront cardFace">
+                    <img class="kunai kunaiLeft" src="img/kunai.png">
+                    <img class="kunai kunaiRight" src="img/kunai.png">
+                    <img class="kunai kunaiBottom" src="img/kunai.png">
+                    <img class="kunai kunaiTop" src="img/kunai.png">
+                    <img class="cardValue" src="img/n4.png">
+                </div>
+            </div>
+            <div class="card">
+                <div class="cardBack cardFace">
+                    <img class="kunai kunaiLeft" src="img/kunai.png">
+                    <img class="kunai kunaiRight" src="img/kunai.png">
+                    <img class="kunai kunaiBottom" src="img/kunai.png">
+                    <img class="kunai kunaiTop" src="img/kunai.png">
+                    <img class="ninja" src="img/ninja.png">
+                </div>
+                <div class="cardFront cardFace">
+                    <img class="kunai kunaiLeft" src="img/kunai.png">
+                    <img class="kunai kunaiRight" src="img/kunai.png">
+                    <img class="kunai kunaiBottom" src="img/kunai.png">
+                    <img class="kunai kunaiTop" src="img/kunai.png">
+                    <img class="cardValue" src="img/n5.png">
+                </div>
+            </div>
+            <div class="card">
+                <div class="cardBack cardFace">
+                    <img class="kunai kunaiLeft" src="img/kunai.png">
+                    <img class="kunai kunaiRight" src="img/kunai.png">
+                    <img class="kunai kunaiBottom" src="img/kunai.png">
+                    <img class="kunai kunaiTop" src="img/kunai.png">
+                    <img class="ninja" src="img/ninja.png">
+                </div>
+                <div class="cardFront cardFace">
+                    <img class="kunai kunaiLeft" src="img/kunai.png">
+                    <img class="kunai kunaiRight" src="img/kunai.png">
+                    <img class="kunai kunaiBottom" src="img/kunai.png">
+                    <img class="kunai kunaiTop" src="img/kunai.png">
+                    <img class="cardValue" src="img/n5.png">
+                </div>
+            </div>
+            <div class="card">
+                <div class="cardBack cardFace">
+                    <img class="kunai kunaiLeft" src="img/kunai.png">
+                    <img class="kunai kunaiRight" src="img/kunai.png">
+                    <img class="kunai kunaiBottom" src="img/kunai.png">
+                    <img class="kunai kunaiTop" src="img/kunai.png">
+                    <img class="ninja" src="img/ninja.png">
+                </div>
+                <div class="cardFront cardFace">
+                    <img class="kunai kunaiLeft" src="img/kunai.png">
+                    <img class="kunai kunaiRight" src="img/kunai.png">
+                    <img class="kunai kunaiBottom" src="img/kunai.png">
+                    <img class="kunai kunaiTop" src="img/kunai.png">
+                    <img class="cardValue" src="img/n6.png">
+                </div>
+            </div>
+            <div class="card">
+                <div class="cardBack cardFace">
+                    <img class="kunai kunaiLeft" src="img/kunai.png">
+                    <img class="kunai kunaiRight" src="img/kunai.png">
+                    <img class="kunai kunaiBottom" src="img/kunai.png">
+                    <img class="kunai kunaiTop" src="img/kunai.png">
+                    <img class="ninja" src="img/ninja.png">
+                </div>
+                <div class="cardFront cardFace">
+                    <img class="kunai kunaiLeft" src="img/kunai.png">
+                    <img class="kunai kunaiRight" src="img/kunai.png">
+                    <img class="kunai kunaiBottom" src="img/kunai.png">
+                    <img class="kunai kunaiTop" src="img/kunai.png">
+                    <img class="cardValue" src="img/n6.png">
+                </div>
+            </div>
+            <div class="card">
+                <div class="cardBack cardFace">
+                    <img class="kunai kunaiLeft" src="img/kunai.png">
+                    <img class="kunai kunaiRight" src="img/kunai.png">
+                    <img class="kunai kunaiBottom" src="img/kunai.png">
+                    <img class="kunai kunaiTop" src="img/kunai.png">
+                    <img class="ninja" src="img/ninja.png">
+                </div>
+                <div class="cardFront cardFace">
+                    <img class="kunai kunaiLeft" src="img/kunai.png">
+                    <img class="kunai kunaiRight" src="img/kunai.png">
+                    <img class="kunai kunaiBottom" src="img/kunai.png">
+                    <img class="kunai kunaiTop" src="img/kunai.png">
+                    <img class="cardValue" src="img/n7.png">
+                </div>
+            </div>
+            <div class="card">
+                <div class="cardBack cardFace">
+                    <img class="kunai kunaiLeft" src="img/kunai.png">
+                    <img class="kunai kunaiRight" src="img/kunai.png">
+                    <img class="kunai kunaiBottom" src="img/kunai.png">
+                    <img class="kunai kunaiTop" src="img/kunai.png">
+                    <img class="ninja" src="img/ninja.png">
+                </div>
+                <div class="cardFront cardFace">
+                    <img class="kunai kunaiLeft" src="img/kunai.png">
+                    <img class="kunai kunaiRight" src="img/kunai.png">
+                    <img class="kunai kunaiBottom" src="img/kunai.png">
+                    <img class="kunai kunaiTop" src="img/kunai.png">
+                    <img class="cardValue" src="img/n7.png">
+                </div>
+            </div>
+            <div class="card">
+                <div class="cardBack cardFace">
+                    <img class="kunai kunaiLeft" src="img/kunai.png">
+                    <img class="kunai kunaiRight" src="img/kunai.png">
+                    <img class="kunai kunaiBottom" src="img/kunai.png">
+                    <img class="kunai kunaiTop" src="img/kunai.png">
+                    <img class="ninja" src="img/ninja.png">
+                </div>
+                <div class="cardFront cardFace">
+                    <img class="kunai kunaiLeft" src="img/kunai.png">
+                    <img class="kunai kunaiRight" src="img/kunai.png">
+                    <img class="kunai kunaiBottom" src="img/kunai.png">
+                    <img class="kunai kunaiTop" src="img/kunai.png">
+                    <img class="cardValue" src="img/n8.png">
+                </div>
+            </div>
+            <div class="card">
+                <div class="cardBack cardFace">
+                    <img class="kunai kunaiLeft" src="img/kunai.png">
+                    <img class="kunai kunaiRight" src="img/kunai.png">
+                    <img class="kunai kunaiBottom" src="img/kunai.png">
+                    <img class="kunai kunaiTop" src="img/kunai.png">
+                    <img class="ninja" src="img/ninja.png">
+                </div>
+                <div class="cardFront cardFace">
+                    <img class="kunai kunaiLeft" src="img/kunai.png">
+                    <img class="kunai kunaiRight" src="img/kunai.png">
+                    <img class="kunai kunaiBottom" src="img/kunai.png">
+                    <img class="kunai kunaiTop" src="img/kunai.png">
+                    <img class="cardValue" src="img/n8.png">
+                </div>
+            </div>
+        </div>
+</body>
+</html>

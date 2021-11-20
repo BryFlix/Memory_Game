@@ -1,0 +1,229 @@
+@import url('https://fonts.googleapis.com/css2?family=Cinzel&family=Comforter&family=Great+Vibes&display=swap');
+
+:root{
+    --green: #27ae60;
+    --black: #444;
+    --light-color: #777;
+    --bg-color: #e6e6e6;
+    --border:.1rem solid rgba(0,0,0,.2);
+    --box-shadow:.4rem .4rem 1rem #ccc,
+        -.4rem -.4rem 1rem #fff;
+    --box-shadow-inset:.4rem .4rem 1rem #ccc inset,
+        -.4rem -.4rem 1rem #fff inset;
+}
+
+*{
+    box-sizing: border-box;
+}
+
+html{
+    min-height: 100vh;
+    font-family: 'Cinzel', serif;
+}
+
+body{
+    margin: 0;
+    background: radial-gradient(gray, black);
+}
+
+.title{
+    color:var(--green);
+    font-weight: normal;
+    text-align: center;
+    font-size: 6em;
+ 
+}
+
+.infoContainer{
+    grid-column: 1 / -1;
+    display: flex;
+    justify-content: space-between;
+}
+
+.info{
+    margin-top: 0px;
+    color: white;
+    font-size: 4rem;
+}
+
+.container{
+    margin: 50px auto;
+    display: grid;
+    grid-template-columns: repeat(8,auto);
+    grid-gap: 10px;
+    justify-content: center;
+    perspective: 500px;
+}
+
+.card{
+    position: relative;
+    height: 175px;
+    width: 125px;
+}
+
+.cardFace{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    backface-visibility: hidden;
+    border-radius: 12px;
+    border-width: 1px;
+    border-style: solid;
+    border: var(--border);
+    transition: transform 500ms ease-in-out;
+}
+
+.card.visible .cardBack{
+    transform: rotateY(-180deg);
+}
+
+.card.visible .cardFront{
+    transform: rotateY(0);
+}
+
+.card.matched .cardFront .cardValue{
+    animation: dance 1s linear infinite 500ms;
+}
+
+.cardBack{
+    background-color: black;
+    border-color: var(--green);
+    transform: rotateY(0);
+}
+
+.kunai{
+    position: absolute;
+    transition: width 100ms ease-in-out, height 100ms ease-in-out;
+    width: 47px;
+    height: 47px;
+}
+
+.cardFace:hover .kunai{
+    width: 52px;
+    height: 52px;
+}
+
+.kunaiLeft{
+    transform: rotate(270deg);
+    top: 0;
+    left: 0;
+}
+
+.kunaiTop{
+    top: 0;
+    right: 0;
+}
+
+.kunaiBottom{
+    transform: rotate(180deg);
+    bottom: 0;
+    left: 0;
+}
+
+.kunaiRight{
+    transform: rotate(90deg);
+    bottom: 0;
+    right: 0;
+}
+
+.ninja{
+    align-self: flex-start;
+    transform: translateY(40px);
+    transition: width 100ms ease-in-out, height 100ms ease-in-out;
+    height: 100px;
+}
+
+.cardBack:hover .ninja{
+    transform: translateY(20px);
+    height: 140px;
+}
+
+.cardValue{
+    transform: scale(.9);
+    height: 100px;
+}
+
+.cardFront:hover .cardValue{
+    transition: transform 100ms ease-in-out;
+    transform: scale(1.5);
+}
+
+.cardFront{
+    background-color: orange;
+    border-color: black;
+    transform: rotateY(180deg);
+}
+
+.overlayText{
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    justify-content: center;
+    align-items: center;
+    z-index: 100;
+    color: var(--green);
+    transition: background-color 500ms;
+}
+
+.overlayTextSmall{
+    font-size: 3rem;
+}
+
+.overlayText.visible{
+    display: flex;
+    flex-direction: column;
+    animation: overlaygrow 500ms forwards;
+}
+
+@keyframes overlaygrow{
+    from {
+        background-color: rgba(0,0,0,0);
+        font-size: 0;
+    }
+    to{
+        background-color: rgba(0,0,0,.8);
+        font-size: 10rem;
+    }
+}
+
+@keyframes dance{ 
+    0%, 100%{
+        transform: rotate(0);
+    }
+    25%{
+      transform: rotate(-30deg);
+    }
+    75%{
+        transform: rotate(30deg);
+      }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
